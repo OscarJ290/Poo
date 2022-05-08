@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="782.0" style="-fx-background-color: #002847;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fes.aragon.controlador.InicioController">
+   <bottom>
+      <HBox alignment="TOP_CENTER" prefHeight="63.0" prefWidth="782.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevoHotel" text="Nuevo" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOSPITAL_ALT" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../css/application.css" />
+                  <URL value="@../css/application.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modificarHotel" text="Modificar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOSPITAL_ALT" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../css/application.css" />
+                  <URL value="@../css/application.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminarHotel" text="Eliminar" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="HOSPITAL_ALT" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../css/application.css" />
+                  <URL value="@../css/application.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="btnSalir" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#salir" text="Salir" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="30" />
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@../css/application.css" />
+                  <URL value="@../css/application.css" />
+               </stylesheets>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <top>
+      <ImageView fitHeight="150.0" fitWidth="488.0" pickOnBounds="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../recursos/portada.png" />
+         </image>
+      </ImageView>
+   </top>
+   <center>
+      <TableView fx:id="tblTabla" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="clmNombre" prefWidth="110.0" text="Nombre" />
+          <TableColumn fx:id="clmDireccion" prefWidth="250.0" text="Direccion" />
+            <TableColumn fx:id="clmCorreo" prefWidth="157.0" text="Correo" />
+            <TableColumn fx:id="clmTelefono" prefWidth="126.0" text="Telefono" />
+            <TableColumn fx:id="clmGerente" prefWidth="138.0" text="Gerente" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
